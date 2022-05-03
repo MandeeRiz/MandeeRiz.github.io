@@ -17,7 +17,10 @@ const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
 //rounds on a for loop (initiated by clicking start)
 const startGame = async () => {
     for(let roundCounter=1; roundCounter <11; roundCounter++){
-        console.log(roundCounter);
+        // change textcontent for round
+        let roundNumber = document.querySelector(".roundNumber")
+        roundNumber.textContent = roundCounter;
+        console.log(roundCounter); //take this out once devlopment is complete
         await wait(2000);
         duckKeyframe();
         await wait (9000);
