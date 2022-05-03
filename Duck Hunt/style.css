@@ -1,3 +1,35 @@
+@keyframes duckFly {
+    from {
+        transform: translate(0%, 0%);
+    }
+    to {
+        transform: translate(1600%, -800%);
+    }
+}
+
+.duckToggle{
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:6%;
+    animation-name: duckFly;
+    animation-duration: 8s;
+    animation-iteration-count: 1;
+    animation-delay: 3000;
+    z-index: 10;
+} 
+
+
+.duck{
+    z-index: 10;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:6%;
+} 
+
 .tvScreen{
     position: absolute;
     top:8vh;
@@ -16,7 +48,15 @@
     background-size: 150vh;
     background-image: url("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSfoaFGGTgQSKf0liWVxJR6TK9ggxclP2TnZw&usqp=CAU");
 }
+.startButton{
+    position: absolute;
+    bottom:0px;
+    left:47%;
+}
 .roundDisplay{
+    position:absolute;
+    top:0px;
+    left:45%;
     border-radius: 15%;
     border:white double;
     display: inline-block;
@@ -34,15 +74,15 @@
     color: white;
     padding:6px;
     font-size: smaller;
-    width:70px;
+    width:90px;
+    height:60px;
 }
 .navBar{
-    height: 10vh;
-    border:solid rgb(0, 255, 128);
-   position: absolute;
-   bottom: 0;
-   right: 0;
-   left:0;
+    height: 11.5vh;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    left:0;
 }
 .computerStats{
     border:double white;
@@ -52,5 +92,16 @@
     color: white;
     padding:6px;
     font-size: smaller;
-    width:70px;
+    width:90px;
+    height:60px;
+    position:absolute;
+    top:0;
+    right:0px;
+}
+.duck{
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:6%;
 }
