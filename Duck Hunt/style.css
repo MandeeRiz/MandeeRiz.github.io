@@ -105,3 +105,6 @@
     position:absolute;
     top:6%;
 }
+.hidden{
+    display:none;
+}
