@@ -1,22 +1,62 @@
 @keyframes duckFly {
-    from {
-        transform: translate(0%, 0%);
+    0% {
+        height: 6vh;
+        width: 6vh;
     }
-    to {
+    25% {
+        transform: translate(0%, 0%);
+        height:8vh;
+        width: 8vh;
+    }
+    50% {
         transform: translate(1600%, -800%);
     }
+    75% {
+        
+    }
+    100% {
+        transform: translate(1200%, -800%);
+    }
 }
+@keyframes duckFly2 {
+    0%  {
+        transform: translateX(0vw);
+        height:10px;
+        width:10px;
+        display:block;
+        
+    }
 
+    20%{
+        transform: translateX(15vw);
+        height:90px;
+        width:90px;
+        display:block;
+
+    }
+
+    50%{
+        transform: translateY(-2vh);
+        height:90px;
+        width:90px;
+    }
+
+    100% {
+        transform: translateX(48vw);
+        height:0;
+        width:0;
+    }
+}
 .duckToggle{
     border:solid red;
     height:8vh;
-    width: 8vh;
+    width: 8vw;
     position:absolute;
     top:6%;
-    animation-name: duckFly;
-    animation-duration: 8s;
+    animation-name: duckFly2;
+    animation-duration: 3s;
+    animation-delay: 2000;
     animation-iteration-count: 1;
-    animation-delay: 3000;
     z-index: 10;
 } 
 img {
@@ -29,8 +69,12 @@ img {
     border:solid red;
     height:8vh;
     width: 8vh;
-    position:absolute;
+    position:fixed;
     top:6%;
+    margin-left: 12%;
+    margin-top: 20%;
+    display:none;
+    
 } 
 
 .tvScreen{
@@ -104,6 +148,14 @@ img {
 
 .hidden{
     display:none;
+}
+.instructions{
+    border: double white;
+    display: inline-block;
+    color: white;
+    font-size: x-small;
+    background-color: black;
+    height: 200px;
 }
 .openingtvScreen{
     position: absolute;

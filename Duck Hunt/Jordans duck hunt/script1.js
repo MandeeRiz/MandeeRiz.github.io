@@ -39,6 +39,7 @@ const startGame = async () => {
         roundNumber.textContent = roundCounter;
         await wait(2000);
         //send duck keyframe
+        duck.style.display = "none";
         duckKeyframe();
         await wait (9000);
         if(quack.shot === false){
@@ -51,11 +52,11 @@ const startGame = async () => {
             console.log("The Duck got away!")
         }
         }
-        if (player.points > computer.points){
+        if (user.points > computer.points){
         console.log("Winner"); //winner function goes here
-        } else if (player.points < computer.points){
+        } else if (user.points < computer.points){
             console.log("loser")
-        } else if (player.points == computer.points){
+        } else if (user.points == computer.points){
             console.log("TIE");
         }
     }
@@ -71,7 +72,9 @@ const resetAmmo = () => {
 
 //-duck keyframe
 const duckKeyframe = () => {
+    duck.style.display = "block";
 duck.classList.add("duckToggle")
+duck.style.display = "none";
 }
 // out of ammo (if ammo <=0 disable onclick function for screen and duck re enable at start of round)
 
@@ -129,8 +132,4 @@ const duckPoints= () => {
     }
 }
 
-let screen = document.querySelector(".tvScreen")
-screen.classList.add("openingtvScreen")
 
-//dog retrives duck
-//https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FTevg2-RRzYiFWiBDMSvR6vee7lmKQTNDg&usqp=CAU
