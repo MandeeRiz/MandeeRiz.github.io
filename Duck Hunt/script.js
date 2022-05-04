@@ -1,15 +1,23 @@
+
+
 // User object (points:, Ammo,)
 const user={
     points: 0,
-    ammo: 3
+    ammo: 3,
 }
 
-let ammoNum = document.querySelector(".ammoNum");
-ammoNum.textContent = user.ammo;
+const quack = {
+    shot: false,
+}
+
 //computer object(points,)
 const computer = {
     points: 0,
 }
+
+let ammoNum = document.querySelector(".ammoNum");
+let duck = document.querySelector(".duck")
+
 
 // wait function
 const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
@@ -17,6 +25,10 @@ const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
 //rounds on a for loop (initiated by clicking start)
 const startGame = async () => {
     for(let roundCounter=1; roundCounter <11; roundCounter++){
+        //reset duck visability
+        duck.classList = "duck";
+        //reset quack.shot
+        quack.shot = false;
         // reset ammo
         resetAmmo();
         //update reset ammo
@@ -24,35 +36,51 @@ const startGame = async () => {
         // change textcontent for round
         let roundNumber = document.querySelector(".roundNumber")
         roundNumber.textContent = roundCounter;
-        console.log(roundCounter); //take this out once devlopment is complete
         await wait(2000);
         //send duck keyframe
         duckKeyframe();
         await wait (9000);
+        if(quack.shot === false){
+           // duckPoints();
+            //let cScore = document.querySelector(".compScoreNum").textContent;
+            //let number= parseInt(cScore);
+            //cScore = number += score;
+            //score = 0;
+            console.log("The Duck got away!")
         }
-        console.log("hello"); //winner function goes here
+        }
+        if (player.points > computer.points){
+        console.log("Winner"); //winner function goes here
+        } else if (player.points < computer.points){
+            console.log("loser")
+        } else if (player.points == computer.points){
+            console.log("TIE");
+        }
     }
 
 
 //-ammo=3
-
 const resetAmmo = () => {
     user.ammo = 3;
-
 }
+
+
 //-wait a few seconds
 
 //-duck keyframe
-const duckKeyframe = () =>{
-let duck = document.querySelector(".duck")
-duck.classList.toggle("duckToggle")
+const duckKeyframe = () => {
+duck.classList.add("duckToggle")
 }
 // out of ammo (if ammo <=0 disable onclick function for screen and duck re enable at start of round)
 
 // onclick screen (-player1 ammo, )
 const shotScreen = () => {
+    if(user.ammo > 0){
     user.ammo -= 1;
     ammoNum.textContent = user.ammo;
+    } else if (user.ammo <= 0){
+        console.log("out of ammo")
+    }
 }
 let tvScreen = document.querySelector(".tvScreen");
 tvScreen.addEventListener("click", shotScreen);
@@ -60,12 +88,22 @@ tvScreen.addEventListener("click", shotScreen);
 
 //onclick duck (duck disappears, points displayed on screen temporarily, player gets points, -ammo, round finishes, innerhtml for round changes +1, reset ammo)
 const shotDuck = () => {
+    if(user.ammo == 0){
+        console.log("Out of Ammo")
+    } else if (user.ammo > 0){
+    quack.shot = true;
     duck.classList.add("hidden");
     console.log("I shot him!");
     user.ammo -= 1;
     ammoNum.textContent = user.ammo;
+    duckPoints();
+    let uScore = document.querySelector(".userScoreNum");
+    let stringNum = uScore.innerText;
+    let number = parseInt(stringNum);
+    let total = number += score;
+    uScore.innerText = total;
+    }
 }
-let duck = document.querySelector(".duck")
 duck.addEventListener("click", shotDuck)
 //duck flies away (computer +points, computer got him!, points for duck displayed by ducks exit, round finishes, innerhtml for round changes +1, reset ammo)
 //duck exits = end of round
@@ -75,3 +113,16 @@ duck.addEventListener("click", shotDuck)
 //round starts onclick button (wait a few seconds, start keyframe,)
 const start = document.querySelector(".startButton");
 start.addEventListener("click", startGame);
+let score;
+//duck points
+const duckPoints= () => {
+    if (user.ammo == 3){
+        score = 75;
+    } else if (user.ammo == 2) {
+        score = 150;
+    }else if (user.ammo == 1){
+        score = 75;
+    } else if (user.ammo == 0){
+        score = 50;
+    }
+}

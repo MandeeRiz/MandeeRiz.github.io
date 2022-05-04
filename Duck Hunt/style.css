@@ -19,10 +19,13 @@
     animation-delay: 3000;
     z-index: 10;
 } 
-
-
+img {
+    height:8vh;
+    width:8vh;
+}
 .duck{
     z-index: 10;
+    border-radius: 50%;
     border:solid red;
     height:8vh;
     width: 8vh;
@@ -50,8 +53,8 @@
 }
 .startButton{
     position: absolute;
-    bottom:0px;
-    left:47%;
+    top:275px;
+    left:67%;
 }
 .roundDisplay{
     position:absolute;
@@ -98,13 +101,7 @@
     top:0;
     right:0px;
 }
-.duck{
-    border:solid red;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
-}
+
 .hidden{
     display:none;
 }
