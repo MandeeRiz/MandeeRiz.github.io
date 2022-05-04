@@ -55,8 +55,10 @@ const startGame = async () => {
         console.log("Winner"); //winner function goes here
         } else if (user.points < computer.points){
             console.log("loser")
-        } else if (user.points == computer.points){
+        } else if (user.points === computer.points){
             console.log("TIE");
+        }else{
+            console.log("error")
         }
     }
 
