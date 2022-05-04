@@ -51,11 +51,11 @@ const startGame = async () => {
             console.log("The Duck got away!")
         }
         }
-        if (player.points > computer.points){
+        if (user.points > computer.points){
         console.log("Winner"); //winner function goes here
-        } else if (player.points < computer.points){
+        } else if (user.points < computer.points){
             console.log("loser")
-        } else if (player.points == computer.points){
+        } else if (user.points == computer.points){
             console.log("TIE");
         }
     }
@@ -134,3 +134,4 @@ screen.classList.add("openingtvScreen")
 
 //dog retrives duck
 //https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FTevg2-RRzYiFWiBDMSvR6vee7lmKQTNDg&usqp=CAU
+
