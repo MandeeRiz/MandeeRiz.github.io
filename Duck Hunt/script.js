@@ -39,6 +39,15 @@ const startGame = async () => {
         roundCounters = roundCounter;
         //reset duck visability
         duck.classList = "duck";
+        duck2.classList = "duck2";
+        duck3.classList = "duck3";
+        duck4.classList = "duck4";
+        duck5.classList = "duck5";
+        duck6.classList = "duck6";
+        duck7.classList = "duck7";
+        duck8.classList = "duck8";
+        duck9.classList = "duck9";
+        duck10.classList = "duck10";
         //reset quack.shot
         quack.shot = false;
         // reset ammo
@@ -53,16 +62,27 @@ const startGame = async () => {
         if(roundCounter === 1){
             duck.classList.add("duckToggle")
         } else if (roundCounter === 2){
-            duck2.classList.add("duck2Toggle")
-        } else if(roundCounter == 3){
+            duck10.classList.add("duck10Toggle")
+        } else if(roundCounter === 3){
             duck3.classList.add("duck3Toggle")
-        } else if(roundCounter == 4){
-            duck4.classList.add("duck4Toggle")
-        } else if(roundCounter == 5){
+        } else if(roundCounter === 4){
+            duck8.classList.add("duck8Toggle")
+        } else if(roundCounter === 5){
             duck5.classList.add("duck5Toggle")
+        } else if(roundCounter === 6){
+            duck6.classList.add("duck6Toggle")
+        } else if(roundCounter === 7){
+            duck4.classList.add("duck4Toggle")
+        } else if(roundCounter === 8){
+            duck7.classList.add("duck7Toggle")
+        } else if(roundCounter === 9){
+            duck2.classList.add("duck2Toggle")
+        } else if(roundCounter === 10){
+            duck9.classList.add("duck9Toggle")
         }
-    
-        await wait (8000);
+        //wait for keyframe to complete
+        await wait (7000);
+        //determine points allocation
         if(quack.shot === false){
             duckPoints();
             let cScore = document.querySelector(".compScoreNum");
@@ -73,6 +93,7 @@ const startGame = async () => {
             computer.points = total;
             console.log("The Duck got away!")
         }
+
         }
         if (user.points > computer.points){
         console.log("Winner"); //winner function goes here
@@ -123,13 +144,23 @@ const shotDuck = () => {
     if (roundCounters === 1){
     duck.classList.add("hidden");
     } else if(roundCounters === 2){
-        duck2.classList.add("hidden");
+        duck10.classList.add("hidden");
     }else if(roundCounters === 3){
         duck3.classList.add("hidden");
     }else if (roundCounters === 4){
-        duck4.classList.add("hidden");
+        duck8.classList.add("hidden");
     } else if (roundCounters === 5){
         duck5.classList.add("hidden");
+    } else if (roundCounters === 6){
+        duck6.classList.add("hidden");
+    } else if (roundCounters === 7){
+        duck4.classList.add("hidden");
+    } else if (roundCounters === 8){
+        duck7.classList.add("hidden");
+    } else if (roundCounters === 9){
+        duck2.classList.add("hidden")
+    } else if (roundCounters === 10) {
+        duck9.classList.add("hidden")
     }
     console.log("I shot him!");
     user.ammo -= 1;
@@ -148,6 +179,11 @@ duck2.addEventListener("click", shotDuck);
 duck3.addEventListener("click", shotDuck);
 duck4.addEventListener("click", shotDuck);
 duck5.addEventListener("click", shotDuck);
+duck6.addEventListener("click", shotDuck);
+duck7.addEventListener("click", shotDuck);
+duck8.addEventListener("click", shotDuck);
+duck9.addEventListener("click", shotDuck);
+duck10.addEventListener("click", shotDuck);
 //duck flies away (computer +points, computer got him!, points for duck displayed by ducks exit, round finishes, innerhtml for round changes +1, reset ammo)
 //duck exits = end of round
 
