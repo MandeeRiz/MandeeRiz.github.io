@@ -16,13 +16,56 @@
     }
     50% {
         transform: translate(500%, 300%);
-        animation-timing-function: linear;
+        animation-timing-function: linear; 
     }
     100%{
         transform: translate(1100%, -300%);
-        animation-timing-function: linear;
+        animation-timing-function: linear; 
     }
 }
+
+@keyframes duckFly3 {
+    0%{
+        transform: translate(0%, 0%);
+    }
+    25%{
+        transform: translate(300%, 200%);
+    }
+    50%{
+        transform: translate(600%, 0%);
+    }
+    75%{
+        transform: translate(900%, 200%);
+    }
+    100%{
+        transform: translate(1200%, 0%);
+    }
+}
+
+.duck3{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:1%;
+    left: 8%;
+    animation: duckFly3 2.5s linear;
+    z-index:10;
+}
+
+.duck2{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:2%;
+    left: 8%;
+    animation: duckFly2 3s;
+    z-index:10;
+}
+
  .duckToggle2{
  border-radius: 50%;
  border:solid red;
@@ -32,13 +75,22 @@
  top:2%;
  left: 8%;
  animation-name: duckFly2;
- animation-duration: 1.5ms;
+ animation-duration: 1s;
  animation-timing-function:ease;
  animation-iteration-count: 1;
  z-index:10;
-
  }
 
+ .duck{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:6%;
+    left: 8%;
+    z-index:10;
+} 
 .duckToggle{
     border:solid red;
     height:8vh;
@@ -54,26 +106,8 @@ img {
     height:8vh;
     width:8vh;
 }
-.duck{
-    border-radius: 50%;
-    border:solid red;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
-    left: 8%;
-} 
-.duck2{
-    border-radius: 50%;
-    border:solid red;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:2%;
-    left: 8%;
-    animation: duckFly2 8s 1 ;
-    z-index:10;
-}
+
+
 
 .tvScreen{
     position: absolute;
