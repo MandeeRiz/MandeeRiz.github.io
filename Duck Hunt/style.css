@@ -236,10 +236,6 @@
     z-index:10;
 } 
 .duckToggle{
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
     animation-name: duckFly;
     animation-duration: 3s;
     animation-iteration-count: 1;
@@ -257,12 +253,6 @@
 }
 
  .duck2Toggle{
- border-radius: 50%;
- height:8vh;
- width: 8vh;
- position:absolute;
- top:2%;
- left: 8%;
  animation-name: duckFly2;
  animation-duration: 3.5s;
  animation-timing-function:ease;
@@ -271,13 +261,7 @@
  }
 
  .duck3Toggle{
-    border-radius: 50%;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:1%;
-    left: 8%;
-    animation: duckFly3 5s linear;
+    animation: duckFly3 4s linear;
     z-index:10;
 }
 
@@ -293,12 +277,6 @@
 }
 
 .duck4Toggle{
-    border-radius: 50%;
-    height:14vh;
-    width: 14vh;
-    position:absolute;
-    top:5%;
-    left: 5%;
     animation: duckFly4 4s linear 1; 
     z-index:10;
 }   
@@ -329,13 +307,6 @@
 }
 
 .duck5Toggle{
-    border-radius: 50%;
-    height:14vh;
-    width: 14vh;
-    position:absolute;
-    top:4%;
-    left: 8%;
-    z-index:10;
     animation: duckFly5 6s 1;
 }
 
@@ -355,13 +326,6 @@
 }
 
 .duck6Toggle{
-    border-radius: 50%;
-    height:12vh;
-    width: 12vh;
-    position:absolute;
-    top:6%;
-    left: 58%;
-    z-index:10;
     animation-name: duckFly6;
     animation-iteration-count: 1;
     animation-duration: 3s;
@@ -378,13 +342,6 @@
 }
 
 .duck7Toggle{
-    border-radius: 50%;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
-    left: 58%;
-    z-index:10;
     animation-name: duckFly7;
     animation-iteration-count: 1;
     animation-duration: 3s;
@@ -401,13 +358,6 @@
 }
 
 .duck8Toggle{
-    border-radius: 50%;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
-    left: 58%;
-    z-index:10;
     animation-name: duckFly8;
     animation-iteration-count: 1;
     animation-duration: 3s;
@@ -424,13 +374,6 @@
 }
 
 .duck9Toggle{
-    border-radius: 50%;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:6%;
-    left: 58%;
-    z-index:10;
     animation-name: duckFly9;
     animation-iteration-count: 1;
     animation-duration: 3s;
@@ -447,13 +390,6 @@
 }
 
 .duck10Toggle{
-    border-radius: 50%;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:2%;
-    left: 58%;
-    z-index:10;
     animation-name: duckFly10;
     animation-iteration-count: 1;
     animation-duration: 3.5s;
@@ -585,7 +521,7 @@ img {
     display: block;
     width: 280px;
     position: absolute;
-    left: 110vh;
+    left: 109vh;
     z-index: 1000;
 }
 body{
