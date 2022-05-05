@@ -42,46 +42,72 @@
     }
 }
 
-.duck3{
-    border-radius: 50%;
-    border:solid red;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:1%;
-    left: 8%;
-    animation: duckFly3 2.5s linear;
-    z-index:10;
+@keyframes duckFly4 {
+    0%{
+        transform: translate(0%, 0%);
+        height:14vh;
+        width: 14vh;
+    }
+    25%{
+        transform: translate(300%, -200%);
+        height:10vh;
+        width: 10vh;
+    }
+    50%{
+        transform: translate(600%, -400%);
+        height:8vh;
+        width: 8vh;
+    }
+    75%{
+        transform: translate(900%, -800%);
+        height:6vh;
+        width: 6vh;
+    }
+    100%{
+        transform: translate(2000%, -1000%);
+        height:4vh;
+        width: 4vh;
+    }
 }
 
-.duck2{
-    border-radius: 50%;
-    border:solid red;
-    height:8vh;
-    width: 8vh;
-    position:absolute;
-    top:2%;
-    left: 8%;
-    animation: duckFly2 3s;
-    z-index:10;
+@keyframes duckFly5 {
+    0%{
+        transform: translate(0%, 0%);
+        animation-timing-function: linear;
+    }
+    10%{
+        transform:translate(100%, 0%);
+        animation-timing-function: linear;
+    }
+    15%{
+        transform:translate(200%, 100%);
+        animation-timing-function: linear;
+    }
+    20% {
+        transform: translate(300%,0%);
+        animation-timing-function: linear;
+    }
+    30%{
+        transform: translate(400%,50%);
+        animation-timing-function: linear;
+    }
+    35%{
+        transform: translate(500%,0%);
+        animation-timing-function: linear;
+    }
+    50%{
+        transform: translate(600%,-50%);
+        animation-timing-function: linear;
+    }
+    100%{
+        transform:translate(1600%,0%);
+        animation-timing-function: linear;
+    }
+    
 }
+/*===============================end of keyframes==============================*/
 
- .duckToggle2{
- border-radius: 50%;
- border:solid red;
- height:8vh;
- width: 8vh;
- position:absolute;
- top:2%;
- left: 8%;
- animation-name: duckFly2;
- animation-duration: 1s;
- animation-timing-function:ease;
- animation-iteration-count: 1;
- z-index:10;
- }
-
- .duck{
+.duck{
     border-radius: 50%;
     border:solid red;
     height:8vh;
@@ -102,12 +128,112 @@
     animation-iteration-count: 1;
     z-index: 10;
 } 
+
+.duck2{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:2%;
+    left: 8%;
+    z-index:10;
+}
+
+ .duckToggle2{
+ border-radius: 50%;
+ border:solid red;
+ height:8vh;
+ width: 8vh;
+ position:absolute;
+ top:2%;
+ left: 8%;
+ animation-name: duckFly2;
+ animation-duration: 3s;
+ animation-timing-function:ease;
+ animation-iteration-count: 1;
+ z-index:10;
+ }
+
+ .duck3toggle{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:1%;
+    left: 8%;
+    animation: duckFly3 2.5s linear;
+    z-index:10;
+}
+
+
+.duck3{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:1%;
+    left: 8%;
+    z-index:10;
+}
+
+.duck4toggle{
+    border-radius: 50%;
+    border:solid red;
+    height:14vh;
+    width: 14vh;
+    position:absolute;
+    top:5%;
+    left: 5%;
+    animation: duckFly4 3.5s linear 1; 
+    z-index:10;
+}   
+
+.duck4{
+    border-radius: 50%;
+    border:solid red;
+    height:14vh;
+    width: 14vh;
+    position:absolute;
+    top:5%;
+    left: 5%;
+    z-index:10;
+}   
+
+.duck4size{
+    width:100%;
+    height: 100%;
+}
+
+.duck5{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:4%;
+    left: 8%;
+    z-index:10;
+}
+
+.duck5toggle{
+    border-radius: 50%;
+    border:solid red;
+    height:8vh;
+    width: 8vh;
+    position:absolute;
+    top:4%;
+    left: 8%;
+    z-index:10;
+    animation: duckFly5 3s 1;
+}
+
 img {
     height:8vh;
     width:8vh;
 }
-
-
 
 .tvScreen{
     position: absolute;
