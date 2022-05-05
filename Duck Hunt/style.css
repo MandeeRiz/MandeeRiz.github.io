@@ -140,7 +140,7 @@
     z-index:10;
 }
 
- .duckToggle2{
+ .duck2Toggle{
  border-radius: 50%;
  border:solid red;
  height:8vh;
@@ -149,13 +149,13 @@
  top:2%;
  left: 8%;
  animation-name: duckFly2;
- animation-duration: 3s;
+ animation-duration: 3.5s;
  animation-timing-function:ease;
  animation-iteration-count: 1;
  z-index:10;
  }
 
- .duck3toggle{
+ .duck3Toggle{
     border-radius: 50%;
     border:solid red;
     height:8vh;
@@ -163,7 +163,7 @@
     position:absolute;
     top:1%;
     left: 8%;
-    animation: duckFly3 2.5s linear;
+    animation: duckFly3 3s linear;
     z-index:10;
 }
 
@@ -179,7 +179,7 @@
     z-index:10;
 }
 
-.duck4toggle{
+.duck4Toggle{
     border-radius: 50%;
     border:solid red;
     height:14vh;
@@ -187,7 +187,7 @@
     position:absolute;
     top:5%;
     left: 5%;
-    animation: duckFly4 3.5s linear 1; 
+    animation: duckFly4 4s linear 1; 
     z-index:10;
 }   
 
@@ -218,7 +218,7 @@
     z-index:10;
 }
 
-.duck5toggle{
+.duck5Toggle{
     border-radius: 50%;
     border:solid red;
     height:8vh;
@@ -227,7 +227,7 @@
     top:4%;
     left: 8%;
     z-index:10;
-    animation: duckFly5 3s 1;
+    animation: duckFly5 4s 1;
 }
 
 img {

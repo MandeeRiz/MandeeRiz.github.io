@@ -16,8 +16,18 @@ const computer = {
 }
 
 let ammoNum = document.querySelector(".ammoNum");
-let duck = document.querySelector(".duck")
-
+let duck = document.querySelector(".duck");
+let duck2 = document.querySelector(".duck2");
+let duck3 = document.querySelector(".duck3");
+let duck4 = document.querySelector(".duck4");
+let duck5 = document.querySelector(".duck5");
+let duck6 = document.querySelector(".duck6");
+let duck7 = document.querySelector(".duck7");
+let duck8 = document.querySelector(".duck8");
+let duck9 = document.querySelector(".duck9");
+let duck10 = document.querySelector(".duck10");
+let roundNumber = document.querySelector(".roundNumber")
+let roundCounters;
 
 // wait function
 const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
@@ -26,6 +36,7 @@ const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
 const startGame = async () => {
     screen.classList.remove("openingtvScreen");
     for(let roundCounter=1; roundCounter <11; roundCounter++){
+        roundCounters = roundCounter;
         //reset duck visability
         duck.classList = "duck";
         //reset quack.shot
@@ -35,12 +46,23 @@ const startGame = async () => {
         //update reset ammo
         ammoNum.textContent = user.ammo;
         // change textcontent for round
-        let roundNumber = document.querySelector(".roundNumber")
         roundNumber.textContent = roundCounter;
         await wait(2000);
         //send duck keyframe
-        duckKeyframe();
-        await wait (9000);
+        //duckKeyframe();
+        if(roundCounter === 1){
+            duck.classList.add("duckToggle")
+        } else if (roundCounter === 2){
+            duck2.classList.add("duck2Toggle")
+        } else if(roundCounter == 3){
+            duck3.classList.add("duck3Toggle")
+        } else if(roundCounter == 4){
+            duck4.classList.add("duck4Toggle")
+        } else if(roundCounter == 5){
+            duck5.classList.add("duck5Toggle")
+        }
+    
+        await wait (8000);
         if(quack.shot === false){
             duckPoints();
             let cScore = document.querySelector(".compScoreNum");
@@ -73,9 +95,10 @@ const resetAmmo = () => {
 //-wait a few seconds
 
 //-duck keyframe
+/*
 const duckKeyframe = () => {
 duck.classList.add("duckToggle")
-}
+}*/
 // out of ammo (if ammo <=0 disable onclick function for screen and duck re enable at start of round)
 
 // onclick screen (-player1 ammo, )
@@ -97,7 +120,17 @@ const shotDuck = () => {
         console.log("Out of Ammo")
     } else if (user.ammo > 0){
     quack.shot = true;
+    if (roundCounters === 1){
     duck.classList.add("hidden");
+    } else if(roundCounters === 2){
+        duck2.classList.add("hidden");
+    }else if(roundCounters === 3){
+        duck3.classList.add("hidden");
+    }else if (roundCounters === 4){
+        duck4.classList.add("hidden");
+    } else if (roundCounters === 5){
+        duck5.classList.add("hidden");
+    }
     console.log("I shot him!");
     user.ammo -= 1;
     ammoNum.textContent = user.ammo;
@@ -110,7 +143,11 @@ const shotDuck = () => {
     user.points = total;
     }
 }
-duck.addEventListener("click", shotDuck)
+duck.addEventListener("click", shotDuck);
+duck2.addEventListener("click", shotDuck);
+duck3.addEventListener("click", shotDuck);
+duck4.addEventListener("click", shotDuck);
+duck5.addEventListener("click", shotDuck);
 //duck flies away (computer +points, computer got him!, points for duck displayed by ducks exit, round finishes, innerhtml for round changes +1, reset ammo)
 //duck exits = end of round
 
