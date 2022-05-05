@@ -317,12 +317,7 @@
     position:absolute;
     top:6%;
     left: 58%;
-    
-}
-
-.duck6size{
-    width:100%;
-    height:100%;
+    z-index:10;
 }
 
 .duck6Toggle{
@@ -461,6 +456,9 @@ img {
     bottom: 0;
     right: 0;
     left:0;
+    display: none;
+    margin: 5px;
+    margin-left: 12px;
 }
 .computerStats{
     border:double white;

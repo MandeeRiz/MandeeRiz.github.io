@@ -28,14 +28,20 @@ let duck9 = document.querySelector(".duck9");
 let duck10 = document.querySelector(".duck10");
 let roundNumber = document.querySelector(".roundNumber")
 let roundCounters;
+let navBar = document.querySelector(".navBar")
+
 
 // wait function
 const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
 //start game function
-//rounds on a for loop (initiated by clicking start)
 const startGame = async () => {
+    //remove the duck hunt screen logo
     screen.classList.remove("openingtvScreen");
+    //change nav bar display to visible
+    navBar.style.display="block";
+    //rounds on a for loop (initiated by clicking start)
     for(let roundCounter=1; roundCounter <11; roundCounter++){
+        //updates roundCounters for determining which duck to apply hidden to
         roundCounters = roundCounter;
         //reset duck visability
         duck.classList = "duck";
@@ -52,13 +58,13 @@ const startGame = async () => {
         quack.shot = false;
         // reset ammo
         resetAmmo();
-        //update reset ammo
+        //update onscreen ammo
         ammoNum.textContent = user.ammo;
         // change textcontent for round
         roundNumber.textContent = roundCounter;
+        //wait 2 seconds before deploying ducks
         await wait(2000);
-        //send duck keyframe
-        //duckKeyframe();
+        //send duck keyframe dependant on round number
         if(roundCounter === 1){
             duck.classList.add("duckToggle")
         } else if (roundCounter === 2){
@@ -81,22 +87,27 @@ const startGame = async () => {
             duck9.classList.add("duck9Toggle")
         }
         //wait for keyframe to complete
-        await wait (7000);
-        //determine points allocation
+        await wait (6000);
+        //determine points allocation for when the duck escapes 
         if(quack.shot === false){
+            //determine computer points based on number of user shots taken
             duckPoints();
             let cScore = document.querySelector(".compScoreNum");
+            //update onscreen computer score
             let stringNum = cScore.innerText;
             let number = parseInt(stringNum);
             let total = number += score;
             cScore.innerText = total;
             computer.points = total;
+            //inform player computer got the escaped duck
             console.log("The Duck got away!")
         }
-
+        //determine winner after 10 rounds by comparing user points and computer points
         }
-        if (user.points > computer.points){
-        console.log("Winner"); //winner function goes here
+        if(user.points === 1500){
+            console.log("Perfect Score!!!")
+        } else if (user.points > computer.points){
+        console.log("Winner");
         } else if (user.points < computer.points){
             console.log("loser")
         } else if (user.points === computer.points){
@@ -113,25 +124,23 @@ const resetAmmo = () => {
 }
 
 
-//-wait a few seconds
-
-//-duck keyframe
-/*
-const duckKeyframe = () => {
-duck.classList.add("duckToggle")
-}*/
 // out of ammo (if ammo <=0 disable onclick function for screen and duck re enable at start of round)
 
-// onclick screen (-player1 ammo, )
+// onclick screen 
 const shotScreen = () => {
+    //if user has ammo take one ammo away 
     if(user.ammo > 0){
     user.ammo -= 1;
+    //update screen ammo number 
     ammoNum.textContent = user.ammo;
     } else if (user.ammo <= 0){
+      //  or if ammo is empty inform user they are out of ammo
         console.log("out of ammo")
     }
 }
+
 let tvScreen = document.querySelector(".tvScreen");
+//determine when user clicks on screen
 tvScreen.addEventListener("click", shotScreen);
 
 
@@ -184,39 +193,35 @@ duck7.addEventListener("click", shotDuck);
 duck8.addEventListener("click", shotDuck);
 duck9.addEventListener("click", shotDuck);
 duck10.addEventListener("click", shotDuck);
-//duck flies away (computer +points, computer got him!, points for duck displayed by ducks exit, round finishes, innerhtml for round changes +1, reset ammo)
-//duck exits = end of round
 
-//calculate winner at the end of round 10. (if user points is greater than computer points screen displays "winner" otherwise screen displays "practice your skills and try again")
-
-//round starts onclick button (wait a few seconds, start keyframe,)
+//round starts onclick start button
 const start = document.querySelector(".startButton");
 start.addEventListener("click", startGame);
 let score;
 //duck points
 const duckPoints= () => {
+    //comp gets 75 points for flyaway duck if you didnt get a shot in
     if (user.ammo == 3){
         score = 75;
+        //you get 150 points for getting the duck on your first shot or comp gets it if you only got one shot in
     } else if (user.ammo == 2) {
         score = 150;
+        //you get 75 pts if you get duck on your second shot or comp gets the same if you only took 2 shots and he got away
     }else if (user.ammo == 1){
         score = 75;
+        //comp gets 50 points if you missed all three shots but he still got away
     } else if (user.ammo == 0){
         score = 50;
     }
 }
 
+//opening screen
 let screen = document.querySelector(".tvScreen")
 screen.classList.add("openingtvScreen")
 
-//dog retrives duck
-//https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FTevg2-RRzYiFWiBDMSvR6vee7lmKQTNDg&usqp=CAU
-
 //refresh button
 const resetButton = document.querySelector(".resetButton");
-
 const resetPage = () =>{
     location.reload();
 }
-
 resetButton.addEventListener("click",resetPage);
