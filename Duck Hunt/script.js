@@ -48,6 +48,7 @@ const startGame = async () => {
             let number = parseInt(stringNum);
             let total = number += score;
             cScore.innerText = total;
+            computer.points = total;
             console.log("The Duck got away!")
         }
         }
@@ -106,6 +107,7 @@ const shotDuck = () => {
     let number = parseInt(stringNum);
     let total = number += score;
     uScore.innerText = total;
+    user.points = total;
     }
 }
 duck.addEventListener("click", shotDuck)
@@ -137,3 +139,11 @@ screen.classList.add("openingtvScreen")
 //dog retrives duck
 //https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-FTevg2-RRzYiFWiBDMSvR6vee7lmKQTNDg&usqp=CAU
 
+//refresh button
+const resetButton = document.querySelector(".resetButton");
+
+const resetPage = () =>{
+    location.reload();
+}
+
+resetButton.addEventListener("click",resetPage);
