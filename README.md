@@ -25,3 +25,18 @@ Scores and ammo and rounds were manipulated using textContent and parseInt.
 Scores were compared at the end of the game with comparison operators.
 The reset button was an onclick button that used a reload method.
 The theme song is played with JS using window onload to play the HTML audio file.
+
+Challenges:
+My first and one of the most significant challenegs during game production, in regards to being able to make my game fuction and my prior knowledge was finding the right way to pause Java Script during my keyframe animations to give the player time to shoot. I solved this but researching setTimeout and setInterval. It was during this research I discovered promises, async and await and found code that would give me the pause I needed for my game.
+
+My next significant challenge was hiding my ducks off screen to have their flight in and out of screen be as natural as possible. My original code had the game screen look like it was being played on a tube tv (nostalgia). I realized I could not hide my ducks behind that div because changing the z-index of that would affect the z-index of my screen and duck divs and could not achieve my goal that way. To get around that I created 4 divs around my original screen(top,right,left and bottom). I made them black and gave them high z-indexs so that the ducks would be hidden behind them while awaiting their round. ?This worked beautifully if not the exact look I wanted to achieve but gave me the result I wanted. 
+
+
+Upon creating my onclick shooting functions I realized that my start button being on the screen caused the user to use one shot during the first round starting the game. I solved this easily by moving my start button off screen.
+
+I limited shots each round by creating a varible that tracked ammo. Everytime a shot was fired either on the duck or screen I created code to check that ammo was available and would reduce the ammo when clicked or would not do anything if ammo was 0. I achieved this with if statements. 
+
+Having the score update was a challenege but after research I discovered I needed to turn my html scores from strings to integers to update them in JavaScript correctly. I achieved this using ParseInt.
+
+
+
