@@ -101,9 +101,10 @@ const startGame = async () => {
             computer.points = total;
             //inform player computer got the escaped duck
             console.log("The Duck got away!");
-            dog.classList.remove("dog");
+            //play dog laugh sound
+            document.getElementById("dogLaugh").play()
             await wait (1000);
-            dog.classList.add("dog");
+            
         }
         //determine winner after 10 rounds by comparing user points and computer points
         }
@@ -239,6 +240,10 @@ const resetPage = () =>{
 }
 resetButton.addEventListener("click",resetPage);
 
+//theme song onload
 window.onload = themeSong();{
     document.getElementById("themeSong").play();
 }
+
+//dog laugh
+//document.getElementById("dogLaugh").play()
