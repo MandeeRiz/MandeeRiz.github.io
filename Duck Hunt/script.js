@@ -238,3 +238,7 @@ const resetPage = () =>{
     location.reload();
 }
 resetButton.addEventListener("click",resetPage);
+
+window.onload = themeSong();{
+    document.getElementById("themeSong").play();
+}
