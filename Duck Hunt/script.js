@@ -29,7 +29,7 @@ let duck10 = document.querySelector(".duck10");
 let roundNumber = document.querySelector(".roundNumber")
 let roundCounters;
 let navBar = document.querySelector(".navBar")
-
+let dog = document.querySelector(".dog")
 
 // wait function
 const wait = (ms) => new Promise (resolve => setTimeout(resolve, ms))
@@ -100,18 +100,31 @@ const startGame = async () => {
             cScore.innerText = total;
             computer.points = total;
             //inform player computer got the escaped duck
-            console.log("The Duck got away!")
+            console.log("The Duck got away!");
+            dog.classList.remove("dog");
+            await wait (1000);
+            dog.classList.add("dog");
         }
         //determine winner after 10 rounds by comparing user points and computer points
         }
         if(user.points === 1500){
-            console.log("Perfect Score!!!")
+            let winner = document.querySelector(".winner");
+            winner.classList.remove("winner")
+            winner.classList.add("winnerOn")
+            winner.textContent = "Perfect Score!"
         } else if (user.points > computer.points){
-        console.log("Winner");
+            let winner = document.querySelector(".winner");
+            winner.classList.remove("winner")
+            winner.classList.add("winnerOn")
         } else if (user.points < computer.points){
-            console.log("loser")
+            let loser = document.querySelector(".loser");
+            loser.classList.remove("loser")
+            loser.classList.add("loserOn")
         } else if (user.points === computer.points){
             console.log("TIE");
+            let tie = document.querySelector(".tie");
+            tie.classList.remove("tie")
+            tie.classList.add("tieOn")
         }else{
             console.log("error")
         }

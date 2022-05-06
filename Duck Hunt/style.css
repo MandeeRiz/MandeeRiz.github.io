@@ -475,9 +475,6 @@ img {
     right:0px;
 }
 
-.hidden{
-    display:none;
-}
 .openingtvScreen{
     position: absolute;
     top:8vh;
@@ -495,6 +492,7 @@ img {
     display: block;
     width: 1050px;
     position:absolute;
+    z-index: 11;
 }
 .left{
         background-color: black;
@@ -525,4 +523,114 @@ img {
 body{
     background-color: black;
     cursor: crosshair;
+}
+.dog {
+    position:absolute;
+    top: 70%;
+    left:47%;
+    display:none;
+    background-image: url("https://quickfixpei.ca/projects/duckhunt/images/dog-laugh.gif");
+}
+
+.showDog{
+    position:absolute;
+    top: 70%;
+    left:47%;
+    display:inline-block;
+    background-image: url("https://quickfixpei.ca/projects/duckhunt/images/dog-laugh.gif");
+}
+
+.winner{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: none;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+
+.winnerOn{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: inline-block;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+.loser{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: none;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+.loserOn{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: inline-block;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+.tieOn{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: inline-block;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+.tie{
+    border:double rgb(31, 243, 11);
+    background-color: black;
+    display: none;
+    border-radius: 15%;
+    color: rgb(31, 243, 11);
+    padding:6px;
+    font-size: x-large;
+    width:90px;
+    height:60px;
+    position: absolute;
+    top:40%;
+    left: 40%;
+    text-align: center;
+}
+.hidden{
+    display:none;
 }
