@@ -1,16 +1,16 @@
 # MandeeRiz.github.io
 Project Week Duck Hunt
 
-My game is Duck Hunt made using HTML, CSS and JS. I chose this game beacsue it was something I could create using these languages and because it was an awesome game from my childhood... nostaglia right? 
+My game is Duck Hunt made using HTML, CSS and JS. I chose this game because I knew it was something I could create using what I know (and a bit of what I didn't) and because it was an awesome game from my childhood... nostalgia right? 
 
 Rules and Gameplay
-The game starts upon clicking the start button. 10 rounds are played between the user and computer. each round consists of one duck flying through the screen. The user gets 3 chances (ammo) per round to shoot the duck. If the user suscessfully shoots the duck they recieve points based on how many shots it took for them to hit the duck that round. This is also used to determine how many points the computer gets if the duck escapes. 
+The game begins upon clicking the start button. 10 rounds are played between the user and computer. Each round consists of one duck flying across the screen. The user gets 3 chances (ammo) per round to shoot the duck. If the user suscessfully shoots the duck they recieve points based on how many shots it took for them to hit the duck that round. This is also used to determine how many points the computer gets if the duck escapes. 
 
 Points work as follows:
 If the user doesn't shoot a single shot the computer recieves 75 points for that round.
 If the user shoots the duck in one shot or only shoots one shot and misses the winner of that round recieves 150 points.
-If the user shoots the duck in 2 shots or only shoots two shots and misses the winner recieves 75 points.
-If the user shoots the duck after 3 shots or misses all three the winner of that round recieves 50 points. 
+If the user shoots the duck in 2 shots or only shoots two shots and misses the winner of the round recieves 75 points.
+If the user shoots the duck after 3 shots or misses all three, the winner of that round receives 50 points. 
 
 The winner of the game is the user that has the highest points at the end of the 10 rounds. 
 
